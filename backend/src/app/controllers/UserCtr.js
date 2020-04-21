@@ -2,9 +2,15 @@ const firebase = require('firebase');
 
 class UserCtr {
   async store(req, res) {
-    const database = firebase.database();
+    const user = firebase.database().ref('users').set(req.body);
 
-    return true; // res.json(firebase.database());
+    return res.json(user);
+  }
+
+  async getUsers(req, res) {
+    const userList = firebase.database().ref('users').on('value');
+
+    return res.json(userList);
   }
 }
 
