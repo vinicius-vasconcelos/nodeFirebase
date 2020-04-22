@@ -6,22 +6,93 @@
     <title>Bem vindo - Wolfcars</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
-  </head>
-  <body>
-    <main class="container level">
-      <section class="level-item section">
-       <form>
-          <figure class="image is-128x128 bg-color--secondary figure-avatar">
-            <img class="is-rounded" src="../assets/image/userAdd.svg" alt="Adicionando usuário">
-          </figure>
-          <h1 class="title text-color--default has-text-centered">Cadastrar</h1>
-       </form>
-      </section>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-      <section class="level-item">
-       
-        <h1 class="title text-color--default has-text-centered">Entrar</h1>
+  </head>
+  <body class="level bg-color-gradient">
+    <main class="container level-item">
+      <section class="section bg-color--overlay box has-shadow has-text-centered has-m">
+        <h1 class="title" data-value="toggle">Entrar - Wolfcars</h1>
+        <h1 class="title is-hidden" data-value="toggle">Cadastrar - Wolfcars</h1>
+
+        <form method="post" class="section" name="form">
+          <div class="field control has-icons-left is-hidden" data-value="toggle">
+            <input class="input is-medium" type="text" name="name" placeholder="Nome completo...">
+            <span class="icon is-left">
+              <i class="fas fa-user text-color--primary"></i>
+            </span>
+          </div>
+
+          <div class="field control has-icons-left">
+            <input class="input is-medium" type="email" name="email" placeholder="fulano@gmail.com">
+            <span class="icon is-left">
+              <i class="fas fa-envelope text-color--primary"></i>
+            </span>
+          </div>
+
+          <div class="field control has-icons-left">
+            <input class="input is-medium" type="password" name="password" placeholder="********">
+            <span class="icon is-left">
+              <i class="fas fa-lock text-color--primary"></i>
+            </span>
+          </div>
+
+          <div class="control field" data-value="toggle">
+            <button class="button is-medium is-fullwidth bg-color--primary border-none has-text-white" 
+              onclick="submitForm('singin')">
+              Entrar
+            </button>
+          </div>
+          <div class="control field is-hidden" data-value="toggle">
+            <button class="button is-medium is-fullwidth bg-color--primary border-none has-text-white" 
+              onclick="submitForm('user')">
+              Cadastrar
+            </button>
+          </div>
+  
+          <div data-value="toggle">
+            <small class="division"> Ou </small>
+            <div class="field control buttons has-icons are-large is-centered has-m-sm-t" > 
+              <button class="button facebook-color border-none button-opacity">
+                <span class="icon">
+                  <i class="fab fa-facebook-square fa-lg has-text-white"></i>
+                </span>
+              </button>
+  
+              <button class="button google-color border-none button-opacity">
+                <span class="icon">
+                  <i class="fab fa-google-plus-square fa-lg has-text-white"></i>
+                </span>
+              </button>
+  
+              <button class="button gitHub-color border-none button-opacity">
+                <span class="icon">
+                  <i class="fab fa-github-square fa-lg has-text-white"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="has-p-t" data-value="toggle">
+            <small>
+              Não tem conta ?
+              <a class="has-text-weight-bold text-color--primary" href="#" onclick="register()">
+                Cadastrar-se
+              </a>
+            </small>
+          </div>
+          <div class="has-p-t is-hidden" data-value="toggle" >
+            <small>
+              Já é cadastrado ?
+              <a class="has-text-weight-bold text-color--primary" href="#" onclick="register()">
+                Entrar agora !
+              </a>
+            </small>
+          </div>
       </section>
     </main>
+
+    <script src="../assets/js/login.js"></script>
   </body>
 </html>

@@ -8,38 +8,80 @@
 
 body, html { width: 100%; height: 100%; }
 body {
-  --bg-color: #100303;
-    --bg-color-primary: #95389e;
-    --bg-color-secondary:#43d8c9;
+  --bg-color: #b2ebf2;
+  --bg-color-overlay: #00bcd4;
+  --bg-color-primary: #dd2c00;
+  --bg-color-secondary:#ff5722;
 
-  --text-color-default: #f7f7f7;
-    --text-color-primary: #95389e;
-    --text-color-secondary: #43d8c9;
+  --text-color-dark: #24292E;
+  --text-color--light: #b2ebf2;
+  --text-color-primary: #dd2c00;
+  --text-color-secondary: #ff5722;
 
   --fnt-family: 'Fira Sans', sans-serif;
 
   font-size: 16px;
   font-family: var(--fnt-family);
-  background-color: var(--bg-color);
-  color: var(--text-color-default);
+  background-color: #EEE;
+  color: var(--text-color-dark);
 }
 
-a { text-decoration: none; color: var(--text-color-primary);}
+.has-w-100 { width: 100%; }
+.has-h-100 { height: 100vh; }
 
-img { max-width: 100%; display: block; }
+.border-none { border: none !important; }
 
-main {
-  width: 100%;
-  height: 100vh;
-}
+.has-shadow { box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, .15); }
 
-.bg-color--dark { background-color: var(--bg-color); }
+.bg-color { background-color: var(--bg-color); }
+.bg-color--overlay { background-color: var(--bg-color-overlay); }
 .bg-color--primary { background-color: var(--bg-color-primary); }
 .bg-color--secondary { background-color: var(--bg-color-secondary); }
+.bg-color-gradient {  background:linear-gradient(to right bottom, #b2ebf2, #95dfea, #76d4e2, #51c8db, #00bcd4);}
 
-.text-color--default { color: var(--text-color-default); }
+.text-color--dark { color: var(--text-color-dark); }
+.text-color--light { color: var(--text-color--light); }
 .text-color--primary { color: var(--text-color-primary); }
 .text-color--secondary { color: var(--text-color-secondary); }
 
-.figure-avatar {border-radius: 50%; padding: 15px; }
-section{border: 1px solid #fff;}
+.facebook-color {background-color: #0B84ED; }
+.google-color {background-color: #C14137; }
+.gitHub-color {background-color: #24292E; }
+
+.button-opacity:hover,
+.button-opacity:focus {opacity: .75;}
+
+.division::before,
+.division::after { content: url(../image/separator.svg); margin: 5px }
+
+.has-m-sm { margin: .5rem; }
+  .has-m-sm-t { margin-top: .5rem; }
+  .has-m-sm-r { margin-right: .5rem; }
+  .has-m-sm-b { margin-bottom: .5rem; }
+  .has-m-sm-l { margin-left: .5rem; }
+.has-m { margin: 1rem; }
+  .has-m-t { margin-top: 1rem; }
+  .has-m-r { margin-right: 1rem; }
+  .has-m-b { margin-bottom: 1rem; }
+  .has-m-l { margin-left: 1rem; }
+.has-m-lg { margin: 1rem; }
+  .has-m-lg-t { margin-top: 1.5rem; }
+  .has-m-lg-r { margin-right: 1.5rem; }
+  .has-m-lg-b { margin-bottom: 1.5rem; }
+  .has-m-lg-l { margin-left: 1.5rem; }
+
+.has-p-sm { padding: .5rem; }
+  .has-p-sm-t { padding-top: .5rem; }
+  .has-p-sm-r { padding-right: .5rem; }
+  .has-p-sm-b { padding-bottom: .5rem; }
+  .has-p-sm-l { padding-left: .5rem; }
+.has-p { padding: 1rem; }
+  .has-p-t { padding-top: 1rem; }
+  .has-p-r { padding-right: 1rem; }
+  .has-p-b { padding-bottom: 1rem; }
+  .has-p-l { padding-left: 1rem; }
+.has-p-lg { padding: 1rem; }
+  .has-p-lg-t { padding-top: 1.5rem; }
+  .has-p-lg-r { padding-right: 1.5rem; }
+  .has-p-lg-b { padding-bottom: 1.5rem; }
+  .has-p-lg-l { padding-left: 1.5rem; }
