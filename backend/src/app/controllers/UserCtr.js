@@ -2,9 +2,9 @@ const firebase = require('firebase');
 
 class UserCtr {
   async store(req, res) {
-    // const user = firebase.database().ref('users').set(req.body);
+    firebase.database().ref().child('users').push(req.body);
 
-    return res.json(req.body);
+    return res.status(200).json({ response: 'Usuário cadastrado com sucesso' });
   }
 
   async getUsers(req, res) {

@@ -12,11 +12,16 @@
   </head>
   <body class="level bg-color-gradient">
     <main class="container level-item">
-      <section class="section bg-color--overlay box has-shadow has-text-centered has-m">
-        <h1 class="title" data-value="toggle">Entrar - Wolfcars</h1>
-        <h1 class="title is-hidden" data-value="toggle">Cadastrar - Wolfcars</h1>
+      <section class="section box has-shadow has-text-centered">
+        <h1 class="title has-p-lg-b" data-value="toggle">Entrar - Wolfcars</h1>
+        <h1 class="title has-p-lg-b is-hidden" data-value="toggle">Cadastrar - Wolfcars</h1>
 
-        <form method="post" class="section" name="form">
+        <div class="notification is-hidden">
+          <button class="delete"></button>
+          <small></small>
+        </div>
+
+        <form method="post" name="form">
           <div class="field control has-icons-left is-hidden" data-value="toggle">
             <input class="input is-medium" type="text" name="name" placeholder="Nome completo...">
             <span class="icon is-left">
@@ -40,7 +45,7 @@
 
           <div class="control field" data-value="toggle">
             <button class="button is-medium is-fullwidth bg-color--primary border-none has-text-white" 
-              onclick="submitForm('singin')">
+              onclick="submitForm('signin')">
               Entrar
             </button>
           </div>
@@ -53,7 +58,7 @@
   
           <div data-value="toggle">
             <small class="division"> Ou </small>
-            <div class="field control buttons has-icons are-large is-centered has-m-sm-t" > 
+            <div class="field control buttons has-icons are-large is-centered has-p-sm-t" > 
               <button class="button facebook-color border-none button-opacity">
                 <span class="icon">
                   <i class="fab fa-facebook-square fa-lg has-text-white"></i>
@@ -74,7 +79,7 @@
             </div>
           </div>
 
-          <div class="has-p-t" data-value="toggle">
+          <div class="has-p-lg-t" data-value="toggle">
             <small>
               Não tem conta ?
               <a class="has-text-weight-bold text-color--primary" href="#" onclick="register()">
