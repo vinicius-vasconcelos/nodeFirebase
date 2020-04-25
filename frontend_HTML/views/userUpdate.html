@@ -1,0 +1,37 @@
+<div class="section has-background-white column is-6 has-text-centered has-border-radius has-shadow">
+  <form class="section" method="post" name="form">
+    <div class="field control has-icons-left" data-value="toggle">
+      <input class="input is-medium" type="text" name="name" placeholder="Nome completo...">
+      <span class="icon is-left">
+        <i class="fas fa-user text-light--overlay"></i>
+      </span>
+    </div>
+
+    <div class="field control has-icons-left">
+      <input class="input is-medium" type="email" name="email" placeholder="fulano@gmail.com" disabled>
+      <span class="icon is-left">
+        <i class="fas fa-envelope text-light--overlay"></i>
+      </span>
+    </div>
+
+    <div class="field control has-icons-left">
+      <input class="input is-medium" type="password" name="password" placeholder="********">
+      <span class="icon is-left">
+        <i class="fas fa-lock text-light--overlay"></i>
+      </span>
+    </div>
+
+    <div class="control field">
+      <button class="button is-medium is-fullwidth has-background-success has-not-border has-text-white" 
+        type="button" onclick="submitForm('signin')">
+        salvar
+      </button>
+    </div>
+    <div class="control field">
+      <button class="button is-medium is-fullwidth has-background-danger has-not-border has-text-white" 
+         type="button" onclick="document.location.reload(true)">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>

@@ -9,7 +9,7 @@
 body, html { min-width: 100%; min-height: 100%; }
 body {
   --color-dark: #24292E;
-  --color-dark-overlay: #404448;
+  --color-dark-overlay: #474448;
 
   --color-light: #b2ebf2;
   --color-light-overlay: #00bcd4;
